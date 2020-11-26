@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {Quote} from './Quote'
+import {useSelector, useDispatch} from 'react-redux';
+import {loadAuthor, loadAll} from './actions'
+import {useEffect} from 'react';
+
 
 function App() {
+
+  const quotes = useSelector(state => state.quotes);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadAll());
+  }, [dispatch]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {quotes.map(quotes => <Quote key={quotes.id} quote = {quotes}/>)}
     </div>
   );
 }
