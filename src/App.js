@@ -1,7 +1,7 @@
 import './App.css';
 import {Quote} from './Quote'
 import {useSelector, useDispatch} from 'react-redux';
-import {loadAuthor, loadAll} from './actions'
+import {loadAll, startAddingQuote} from './actions'
 import {useEffect} from 'react';
 
 
@@ -14,10 +14,17 @@ function App() {
     dispatch(loadAll());
   }, [dispatch]);
 
+  const onAdd = () => {
+    dispatch(startAddingQuote());
+  }
 
   return (
     <div className="App">
-      {quotes.map(quotes => <Quote key={quotes.id} quote = {quotes}/>)}
+      <header>
+      <h1>Happy Quotes!</h1>
+        <button onClick={onAdd}>Add Quote</button>
+      </header>
+      {quotes.map(quote => <Quote key={quote.id} quote = {quote}/>)}
     </div>
   );
 }
