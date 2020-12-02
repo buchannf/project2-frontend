@@ -33,17 +33,19 @@ export function Quote(props) {
             <div className="quote">
             <textarea value={message} onChange = { e => setMessage(e.target.value)}/>
             <input type='text' value={author} onChange = { e => setAuthor(e.target.value)}/>
-            <button onClick={onSave}>Save</button>
-            <button onClick={onCancel} >Cancel</button>
-            <button onClick={onDelete}>Delete</button>
+            <div className='buttons'>
+                <button className='save' onClick={onSave}>Save</button>
+                <button className= 'cancel' onClick={onCancel} >Cancel</button>
+                <button className= 'delete' onClick={onDelete}>Delete</button>
+            </div>
         </div>
         );
     }
     return (
         <div className="quote">
-            <p>{quote.message}</p>
+            <p>"{quote.message}"</p>
             <p>-{quote.author}</p>
-            <button onClick={onEdit}>Edit</button>
+            <button className='edit-button' onClick={onEdit}>Edit</button>
         </div>
     );
 }

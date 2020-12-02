@@ -56,6 +56,10 @@ function checkForErrors(response) {
     return response;
 }
 
+
+//Fetch calls to api (GET, POST, PATCH, DELETE)
+
+
 const host = 'https://quote-api.buchannf.me:8443';
 
 export function loadAuthor(author) {
@@ -88,7 +92,7 @@ export function loadAll() {
 
 export function startAddingQuote() {
     const quote = {
-        author: '', message: ''
+        author: 'BY YOU', message: 'NEW QUOTE'
     }
     const options = {
         method: 'POST',

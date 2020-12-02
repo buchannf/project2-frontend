@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App">
       <header>
-      <h1>Happy Quotes!</h1>
-        <button onClick={onAdd}>Add Quote</button>
+        <h1>Happy Thoughts!</h1>
+        <button onClick={onAdd} className='add-button'>Add Some Happiness</button>
       </header>
       {quotes.map(quote => <Quote key={quote.id} quote = {quote}/>)}
     </div>

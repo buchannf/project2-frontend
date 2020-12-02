@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
 .App {
   text-align: center;
   background-color: #F7F065;
@@ -6,16 +7,111 @@
   justify-content: space-around;
 }
 header {
+  font-family: 'Staatliches', cursive;
+  box-shadow: 0 0 20px #EBD86C;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: #F5C842;
 }
 
+
 .quote {
+  box-shadow: 10px 10px #F5C842;
   background-color: #EBD86C;
-  padding: 20px;
   margin-top: 20px;
   margin-left: 25%;
   margin-right: 25%;
+  padding: 20px;
+}
+
+.add-button {
+  margin: 10px;
+  background-color: #F5C842;
+  box-shadow: 0 0 30px #EBD86C;
+  font-size: 1.5em;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Staatliches', cursive;
+}
+
+.add-button:hover {
+  background-color: #EBD86C;
+  box-shadow: 0 0 30px #F5C842;
+  size: 1.5em;
+  border: none;
+}
+
+.edit-button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #E8E156;
+  box-shadow: 0 0 30px #F5C842;
+  font-size: 1.5em;
+  border: none;
+  font-family: 'Staatliches', cursive;
+}
+
+.edit-button:hover {
+  background-color: #EBD86C;
+  box-shadow: 0 0 30px #F5C842;
+  size: 1.5em;
+  border: none;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+}
+.quote > textarea {
+  margin: 10px;
+  resize: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.save {
+  margin-top: 10px;
+  background-color: #E8E156;
+  box-shadow: 0 0 30px #F5C842;
+  font-size: 2.5em;
+  border: none;
+  font-family: 'Staatliches', cursive;
+}
+
+.save:hover {
+  background-color: #EBD86C;
+  box-shadow: 0 0 30px #F5C842;
+}
+
+.cancel {
+  margin-top: 10px;
+  background-color: #E8E156;
+  box-shadow: 0 0 30px #F5C842;
+  font-size: 2.5em;
+  border: none;
+  font-family: 'Staatliches', cursive;
+}
+
+.cancel:hover {
+  background-color: #EBD86C;
+  box-shadow: 0 0 30px #F5C842;
+}
+
+.delete {
+  margin-top: 10px;
+  background-color: #E8E156;
+  box-shadow: 0 0 30px #F5C842;
+  font-size: 2.5em;
+  border: none;
+  font-family: 'Staatliches', cursive;
+}
+
+.delete:hover {
+  background-color: #EBD86C;
+  box-shadow: 0 0 30px #F5C842;
 }
