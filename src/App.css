@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 .App {
   text-align: center;
-  background-color: #F7F065;
+  background-color: #F5C842;
   height: 100vh;
   flex-direction: column;
   justify-content: space-around;
@@ -20,16 +22,18 @@ header {
   box-shadow: 10px 10px #F5C842;
   background-color: #EBD86C;
   margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 25%;
   margin-right: 25%;
   padding: 20px;
 }
 
+
 .add-button {
   margin: 10px;
   background-color: #F5C842;
   box-shadow: 0 0 30px #EBD86C;
-  font-size: 1.5em;
+  font-size: 3.5em;
   border: none;
   padding-left: 20px;
   padding-right: 20px;
@@ -118,5 +122,15 @@ header {
 
 #quote-view {
   height: 75vh;
-  overflow-y:auto
+  overflow-y:auto;
+  background-color: #F7F065;
+}
+
+#author {
+  font-family: 'Ranchers', cursive;
+  text-shadow: 5px 5px #EBD86C;
+}
+#message {
+  font-family: 'Carter One', cursive;
+  text-shadow: 5px 5px #EBD86C;
 }

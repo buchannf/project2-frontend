@@ -43,8 +43,8 @@ export function Quote(props) {
     }
     return (
         <div className="quote">
-            <p>"{quote.message}"</p>
-            <p>-{quote.author}</p>
+            <p id='message'>"{quote.message}"</p>
+            <p id='author'>-{quote.author}</p>
             <button className='edit-button' onClick={onEdit}>Edit</button>
         </div>
     );

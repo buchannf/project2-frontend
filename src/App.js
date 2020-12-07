@@ -22,11 +22,11 @@ function App() {
     <div className="App">
       <header>
         <h1>&#129303;Happy Thoughts!&#129303;</h1>
-        <button onClick={onAdd} className='add-button'>Add Some Happiness</button>
       </header>
       <div id='quote-view'>
         {quotes.slice(0).reverse().map(quote => <Quote key={quote.id} quote = {quote}/>)}
       </div>
+      <button onClick={onAdd} className='add-button'>Add Some Happiness</button>
     </div>
   );
 }
