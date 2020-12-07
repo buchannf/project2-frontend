@@ -115,3 +115,8 @@ header {
   background-color: #EBD86C;
   box-shadow: 0 0 30px #F5C842;
 }
+
+#quote-view {
+  height: 75vh;
+  overflow-y:auto
+}

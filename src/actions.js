@@ -92,7 +92,7 @@ export function loadAll() {
 
 export function startAddingQuote() {
     const quote = {
-        author: 'BY YOU', message: 'NEW QUOTE'
+        author: 'BY YOU', message: 'NEW QUOTE', id: undefined
     }
     const options = {
         method: 'POST',
@@ -106,8 +106,12 @@ export function startAddingQuote() {
         .then(checkForErrors)
         .then(response => response.json())
         .then(data => {
+            console.log(data.id);
             if(data.ok) {
                 quote.id = data.id;
+                //try and fix bad ID
+                document.location.reload();
+                console.log(quote.id);
                 dispatch(finishAddingQuote(quote));
             }
         })
@@ -128,6 +132,7 @@ export function startSavingQuote(quote) {
         .then(checkForErrors)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             if(data.ok) {
                 dispatch(finishSavingQuote(quote));
             }
