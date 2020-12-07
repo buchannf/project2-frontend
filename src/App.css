@@ -35,6 +35,7 @@ header {
   box-shadow: 0 0 30px #EBD86C;
   font-size: 3.5em;
   border: none;
+  border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
   font-family: 'Staatliches', cursive;
@@ -54,6 +55,7 @@ header {
   box-shadow: 0 0 30px #F5C842;
   font-size: 1.5em;
   border: none;
+  border-radius: 10px;
   font-family: 'Staatliches', cursive;
 }
 
@@ -128,9 +130,7 @@ header {
 
 #author {
   font-family: 'Ranchers', cursive;
-  text-shadow: 5px 5px #EBD86C;
 }
 #message {
   font-family: 'Carter One', cursive;
-  text-shadow: 5px 5px #EBD86C;
 }
