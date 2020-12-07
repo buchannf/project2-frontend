@@ -92,7 +92,7 @@ export function loadAll() {
 
 export function startAddingQuote() {
     const quote = {
-        author: 'BY YOU', message: 'NEW QUOTE', id: undefined
+        author: 'BY YOU', message: 'NEW QUOTE'
     }
     const options = {
         method: 'POST',
@@ -106,8 +106,8 @@ export function startAddingQuote() {
         .then(checkForErrors)
         .then(response => response.json())
         .then(data => {
-            console.log(data.id);
             if(data.ok) {
+                console.log(quote);
                 quote.id = data.id;
                 //try and fix bad ID
                 document.location.reload();

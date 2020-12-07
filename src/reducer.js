@@ -52,7 +52,8 @@ function reducer(state = initialState, action) {
         case Action.FinishAddingQuote:
             return {
                 ...state,
-                quotes: [{...action.payload, isEditing: true,}, ...state.quotes],
+                //quotes: [{...action.payload, isEditing: true,}, ...state.quotes],
+                quotes: [...action.payload, ...state.quotes],
             };
         default:
             return state;
