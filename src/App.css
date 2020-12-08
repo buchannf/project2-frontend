@@ -134,3 +134,16 @@ header {
 #message {
   font-family: 'Carter One', cursive;
 }
+
+@media(max-height: 830px) {
+  .add-button {
+    font-size: 2.5em;
+    margin: 0;
+  }
+}
+@media(max-height: 636px) {
+  .add-button {
+    font-size: 1em;
+    margin: 0;
+  }
+}
