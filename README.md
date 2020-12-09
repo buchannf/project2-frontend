@@ -1,6 +1,6 @@
-1.The app has the coherent purpose of sharing happy thoughts and satisfies my personal creative itch for sharing happiness on the web.
-2.It's not a to-do list.
-3.Worked as an individual.
+1.The app has the coherent purpose of sharing happy thoughts and satisfies my personal creative itch for sharing happiness on the web./n
+2.It's not a to-do list./n
+3.Worked as an individual./n
 4.All the code was written by myself.
 5.App does have a back end data store and web service along with a front end client.
 6.Front end used React functional components and hooks (no classes).
