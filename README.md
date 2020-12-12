@@ -8,7 +8,7 @@
 8.State is managed by Redux.<br />
 9.Follows project1 rules for aesthetic and usability.<br />
 10.All access to web service is done by my own fetch calls.<br />
-11.The page does load new entries.<br />
+11.The page does load new entries and is shown with the ProgressBar.<br />
 12.No warning or errors in the console.<br />
 13.Front end is stored on git and shared.<br />
 14.Front end client is available through the given URL.<br />
