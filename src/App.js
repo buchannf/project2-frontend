@@ -3,6 +3,7 @@ import {Quote} from './Quote'
 import {useSelector, useDispatch} from 'react-redux';
 import {loadAll, startAddingQuote} from './actions'
 import {useEffect} from 'react';
+import { ProgressBar } from 'react-fetch-progressbar';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <h1>&#129303;Happy Thoughts!&#129303;</h1>
       </header>
       <div id='quote-view'>
+        <ProgressBar />
         {quotes.slice(0).reverse().map(quote => <Quote key={quote.id} quote = {quote}/>)}
       </div>
       <button onClick={onAdd} className='add-button'>Add Some Happiness</button>

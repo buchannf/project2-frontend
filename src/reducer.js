@@ -9,6 +9,7 @@ function reducer(state = initialState, action) {
         case Action.LoadQuotes:
             return {
                 ...state,
+                isLoading: true,
                 quotes: action.payload,
             };
         case Action.EnterEditMode:
@@ -25,6 +26,7 @@ function reducer(state = initialState, action) {
         case Action.LeaveEditMode:
             return {
                 ...state,
+                isLoading: true,
                 quotes: state.quotes.map(quote => {
                     if(quote.id === action.payload.id) {
                         return {...quote, isEditing: false};
@@ -36,6 +38,7 @@ function reducer(state = initialState, action) {
         case Action.FinishSavingQuote:
             return {
                 ...state,
+                isLoading: true,
                 quotes: state.quotes.map(quote => {
                     if(quote.id === action.payload.id) {
                         return action.payload;
@@ -47,11 +50,13 @@ function reducer(state = initialState, action) {
         case Action.FinishDeletingQuote:
             return {
                 ...state,
+                isLoading: true,
                 quotes: state.quotes.filter(quote => quote.id !== action.payload.id)
             };
         case Action.FinishAddingQuote:
             return {
                 ...state,
+                isLoading: true,
                 //quotes: [{...action.payload, isEditing: true,}, ...state.quotes],
                 quotes: [...action.payload, ...state.quotes],
             };
@@ -59,5 +64,4 @@ function reducer(state = initialState, action) {
             return state;
     }
 }
-
 export default reducer;

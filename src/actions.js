@@ -1,3 +1,7 @@
+import { progressBarFetch, setOriginalFetch } from 'react-fetch-progressbar';
+setOriginalFetch(window.fetch);
+window.fetch = progressBarFetch;
+
 export const Action = Object.freeze({
     LoadQuotes: 'LoadQuotes',
     FinishAddingQuote: 'FinishAddingQuote',
